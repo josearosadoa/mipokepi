@@ -1,0 +1,461 @@
+#root {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+
+}
+
+
+.pokecard-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-top: 190px;
+}
+
+
+.poke-card {
+  height: fit-content;
+  font-family: 'Roboto Mono', monospace;
+  width: 300px;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgb(121, 155, 163);
+  border: 3px solid black;
+}
+
+.userInput-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('src\assets\img\pokemon-in-the-wild.png');
+}
+
+.userInput-container h1 {
+  
+  width: 662px;
+  height: 40px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: red;
+}
+
+.userInput-container img {
+width: 576px;
+height: 121px;
+
+
+
+}
+
+.userInput-container input{
+
+  width: 640px;
+  height: 68px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+}
+
+.userInput-container button {
+  width: 113px;
+  height: 30px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #FFFFFF;
+  background-color: red;
+  border-radius: 6px;
+}
+
+.pokedex-img{
+position: absolute;
+width: 431px;
+height: 76px;
+left: 133px;
+top: 47px;
+
+}
+.input-pokedex{
+  position: absolute;
+width: 600px;
+height: 68px;
+left: 150px;
+top: 184px;
+
+background: #FFFFFF;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-search-pokedex{
+  position: absolute;
+  width: 113.69px;
+  height: 74px;
+  left: 759.34px;
+  top: 184px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: rgb(185, 8, 8);
+
+}
+
+.red-rectangle{
+position: absolute;
+width: 100%;
+height: 123.18px;
+left: 0px;
+top: 870px;
+
+background: #DD1A1A;
+}
+
+.red-rectangle-pokemon{
+  position: absolute;
+  width: 100%;
+  height: 123.18px;
+  left: 0px;
+  top: 0px;
+  
+  background: #DD1A1A;
+
+}
+.black-rectangle-pokemon{
+position: absolute;
+width: 100%;
+height: 49.7px;
+left: 0px;
+top: 122.3px;
+background-color: #000;
+
+}
+.black-rectangle{
+position: absolute;
+width: 100%;
+height: 69px;
+left: 0px;
+top: 962px;
+
+background: #0C0C0C;
+}
+
+.pag-container-prev {
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  left: 685px;
+  top: 1830px;
+  
+  background: #DD1A1A;
+  border-radius: 6px;
+}
+
+.pag-container-next {
+
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  left: 940px;
+  top: 1830px;
+  
+  background: #DD1A1A;
+  border-radius: 6px;
+}
+
+.numpag-container{
+  position: absolute;
+  width: 189px;
+  height: 82px;
+  left: 751px;
+  top: 1820px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #212121;
+}
+
+.numpag-container button{
+
+  font-size: xx-large;
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 38px;
+
+}
+.select-container{
+  position: absolute;
+  width: 400.84px;
+
+  height: 68px;
+  left: 1080.16px;
+  top: 189px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 15%);
+}
+
+.details-container{
+ 
+width: 100%;
+height: 1880px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: #FFFFFF;
+box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+
+}
+
+.details-container img{
+  position: absolute;
+width: 341px;
+height: 314px;
+left: 650px;
+top: 195px;
+
+}
+.details-container h1{
+position: absolute;
+width: 800px;
+height: 43px;
+left: 400px;
+top: 580px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 45px;
+line-height: 53px;
+display: flex;
+align-items: center;
+
+}
+
+.details-container hr{
+border: 1px solid rgba(159, 159, 159, 1);
+
+width: 313.5px;
+height: 0px;
+
+
+border: 1px solid #9F9F9F;
+}
+
+.weight-details{
+position: absolute;
+width: 94px;
+height: 30px;
+left: 700px;
+top: 650px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+
+color: #0F0F2D;
+}
+
+.height-details{
+  
+position: absolute;
+width: 94px;
+height: 30px;
+left: 820px;
+top: 650px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+
+color: #0F0F2D;
+
+}
+
+.type-details {
+  position: absolute;
+width: 435px;
+height: 43px;
+left: 375px;
+top: 750px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 35px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+
+color: #302F2F;
+}
+
+.type-details-data{
+  position: absolute;
+width: 207px;
+height: 47px;
+left: 480px;
+top: 830px;
+font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:#888;
+border-radius: 2px;
+}
+
+
+.skills-details{
+  position: absolute;
+  width: 435px;
+  height: 43px;
+left: 1000px;
+top: 747px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 35px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #302F2F;
+
+}
+
+.skills-details-dataone{
+
+  position: absolute;
+  width: 144px;
+  height: 32px;
+  left: 890px;
+  top: 830px;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: #302F2F;
+  background-color: #888;
+}
+
+.skills-details-datatwoo{
+  position: absolute;
+width: 144px;
+height: 32px;
+left: 1100px;
+top: 830px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 29px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #888;
+color: #302F2F;
+}
+
+.form-conatainer-details{
+  position: absolute;
+width: 650px;
+height: 600px;
+left: 275px;
+top: 927px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+
+}
+
+.form-conatainer-details h3{
+  align-self: flex-start;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 45px;
+line-height: 53px;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+.read-the-docs {
+  color: #888;
+}
