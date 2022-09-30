@@ -50,7 +50,7 @@ const Pokemon = () => {
         <div  >
             <div className='red-rectangle-pokemon'></div>
             <div className='black-rectangle-pokemon'></div>
-            <img className='pokedex-img' src='src\assets\img\image 12.jpg' alt=''></img>
+            <img className='pokedex-img' src='src\assets\img\image 11.jpg' alt=''></img>
              <p>Welcome {name}</p>
              <div >
             <button className='pag-container-prev' onClick={() => setPage(page-1)}
