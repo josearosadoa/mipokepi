@@ -1,19 +1,39 @@
 #root {
-  max-width: 1280px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ min-height: 100%;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(circle at 28.58% 75.53%, #654a6f 0, #6a486b 3.57%, #6f4666 7.14%, #734560 10.71%, #76445b 14.29%, #794355 17.86%, #7a4350 21.43%, #7b434a 25%, #7b4445 28.57%, #7a4540 32.14%, #78473b 35.71%, #764837 39.29%, #734a33 42.86%, #6f4c30 46.43%, #6b4e2d 50%, #67502b 53.57%, #62522a 57.14%, #5c542a 60.71%, #57552b 64.29%, #51572d 67.86%, #4b5830 71.43%, #455a33 75%, #3e5b37 78.57%, #375c3b 82.14%, #305d40 85.71%, #285d46 89.29%, #1f5e4b 92.86%, #145e51 96.43%, #055e57 100%);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.pokeContainer{
+  background-image: radial-gradient(circle at 28.58% 75.53%, #654a6f 0, #6a486b 3.57%, #6f4666 7.14%, #734560 10.71%, #76445b 14.29%, #794355 17.86%, #7a4350 21.43%, #7b434a 25%, #7b4445 28.57%, #7a4540 32.14%, #78473b 35.71%, #764837 39.29%, #734a33 42.86%, #6f4c30 46.43%, #6b4e2d 50%, #67502b 53.57%, #62522a 57.14%, #5c542a 60.71%, #57552b 64.29%, #51572d 67.86%, #4b5830 71.43%, #455a33 75%, #3e5b37 78.57%, #375c3b 82.14%, #305d40 85.71%, #285d46 89.29%, #1f5e4b 92.86%, #145e51 96.43%, #055e57 100%);
+  height: 100vh;
+  width: 100%;
+
 
 }
 
+#active{
+  box-sizing: border-box;
+  width: 380px;
+  height: 380px;
+}
 
 .pokecard-container{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
-  margin-top: 190px;
+  margin-top: 280px;
 }
 
 
@@ -26,7 +46,7 @@
   text-align: center;
   padding: 10px;
   margin: 0 auto;
-  background-color: rgb(121, 155, 163);
+  background-color: rgb(128, 124, 129);
   border: 3px solid black;
 }
 
@@ -50,7 +70,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: red;
+  color: rgba(26, 7, 7, 0.525);
+  margin: 15px;
 }
 
 .userInput-container img {
@@ -84,7 +105,7 @@ height: 121px;
   align-items: center;
 
   color: #FFFFFF;
-  background-color: red;
+  background-color: rgb(77, 21, 21);
   border-radius: 6px;
 }
 
@@ -134,7 +155,7 @@ height: 123.18px;
 left: 0px;
 top: 870px;
 
-background: #DD1A1A;
+background: #3f0f0f;
 }
 
 .red-rectangle-pokemon{
@@ -144,7 +165,7 @@ background: #DD1A1A;
   left: 0px;
   top: 0px;
   
-  background: #DD1A1A;
+  background: #3f0f0f;
 
 }
 .black-rectangle-pokemon{
@@ -168,54 +189,64 @@ background: #0C0C0C;
 
 .pag-container-prev {
   position: absolute;
-  width: 57px;
-  height: 57px;
-  left: 685px;
-  top: 1830px;
+  width: 47px;
+  height: 47px;
+  left: 700px;
+  top: 100%;
   
-  background: #DD1A1A;
+  background: #866464;
   border-radius: 6px;
-}
-
-.pag-container-next {
-
-  position: absolute;
-  width: 57px;
-  height: 57px;
-  left: 940px;
-  top: 1830px;
-  
-  background: #DD1A1A;
-  border-radius: 6px;
-}
-
-.numpag-container{
-  position: absolute;
-  width: 189px;
-  height: 82px;
-  left: 751px;
-  top: 1820px;
-  
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.pag-container {
+
+  display: flex;
+  padding: 5px;
+  margin: 0;
+  color: black;
+  border: 1px solid #ddd;
   text-align: center;
+  width: 120px;
+  font-size: 23px;
+  position: absolute;
+  top: 260px;
+  left: 15px;
   
-  color: #212121;
+ 
+ 
+  border-radius: 6px;
+  
+}
+.pag-container button{
+  transition: background-color .3s;
+  border-radius: 5px;
+  margin: 0 4px;
+  font-size: 20px;
+  
 }
 
-.numpag-container button{
-
-  font-size: xx-large;
-  font-weight: 700;
-  font-size: 51px;
-  line-height: 38px;
+#pagination{
+  display: grid;
+  grid-template-columns: repeat(20,1fr);
+ 
+  position: absolute;
+  top: 260px;
+  left: 140px;
+  
 
 }
+
+#pagination button{
+  transition: background-color .3s;
+  border-radius: 5px;
+  margin: 0 4px;
+  font-size: 23px;
+
+}
+
+
 .select-container{
   position: absolute;
   width: 400.84px;
@@ -230,11 +261,10 @@ background: #0C0C0C;
 .details-container{
  
 width: 100%;
-height: 1880px;
+height: 1680px;
 display: flex;
 flex-direction: column;
 justify-content: center;
-background: #FFFFFF;
 box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
 
 }
@@ -422,8 +452,8 @@ color: #302F2F;
   position: absolute;
 width: 650px;
 height: 600px;
-left: 275px;
-top: 927px;
+left: 160px;
+top: 1030px;
 display: flex;
 flex-direction: column;
 align-items: center;

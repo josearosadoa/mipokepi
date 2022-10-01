@@ -47,36 +47,40 @@ const Pokemon = () => {
         pageNumbers.push(i)
     }
     return (
-        <div  >
+        <div className='pokeContainer' >
             <div className='red-rectangle-pokemon'></div>
             <div className='black-rectangle-pokemon'></div>
-            <img className='pokedex-img' src='src\img\image 11.jpg' alt=''></img>
+            <img className='pokedex-img'  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/905237/International_Pok%C3%A9mon_logo.svg.png" alt=''></img>
              <p>Welcome {name}</p>
-             <div >
-            <button className='pag-container-prev' onClick={() => setPage(page-1)}
+             <div className='pag-container'  >
+            <button  onClick={() => setPage(page-1)}
             disabled={page === 1}
-            >Prev page</button>
-            <button className='pag-container-next'  onClick={() => setPage(page+1)}
+            >Prev </button>
+            <button  onClick={() => setPage(page+1)}
             disabled={page === totalPage}
-            >Next page</button>
+            >Next </button>
             </div>
             <div>
+                <div id='pagination'></div>
 
                 <input className='input-pokedex' type="text" 
                 placeholder='Search by Name' 
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}/>
                 <button className='btn-search-pokedex' onClick={searchName}>Search</button>
-                 <div className='numpag-container'>
+                 
+                <div id='pagination'>
 
                 {
                     pageNumbers.map(number =>(
+                        
                         
                         <button  onClick={() => setPage(number)} >{number}</button>
                         
                         ))
                     }
-                    </div>
+                
+                </div>
                 </div>
                 <div >
                     <select className='select-container' onChange={e => searchType (e.target.value)}>
@@ -97,7 +101,10 @@ const Pokemon = () => {
                     ))
                 }
                 </div>
+               
         </div>
+
+
     );
 };
 
